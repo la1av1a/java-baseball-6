@@ -1,7 +1,13 @@
 package baseball;
 
 public class Application {
+
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        Computer computer = new Computer();
+        Player player = new Player();
+        BaseBall baseBall = new BaseBall();
+
+        Facade facade = new Facade(computer, baseBall, player);
+        facade.start();
     }
 }
